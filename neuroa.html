@@ -32,7 +32,8 @@
     <section> <!-- TITULO -->
       <h1>NEUROA Bienestar Mental basado en Ciencia</h1>
       <h2>
-        Consultas 100% Virtuales. Psicología experta basada en neurociencia entregada a través de una experiencia clínica digital segura y de alto nivel.
+        Consultas 100% Virtuales. Psicología experta basada en neurociencia entregada a través de una experiencia
+        clínica digital segura y de alto nivel.
       </h2>
     </section>
 
@@ -88,13 +89,13 @@
           <span>Evaluación Interactiva</span>
           <h2>Mide tus Niveles de Saturación Mental</h2>
         </div>
-        <span>Pregunta 1 de 5</span>
+        <span id="quiz-progreso">Pregunta 1 de 5</span> <!-- Quiz-contador -->
       </div>
 
-      <div>
-        <p>¿Con qué frecuencia sientes que no puedes concentrarte en una sola tarea durante más de 15
+      <div> <!-- Pregunta -->
+        <p id="quiz-pregunta">¿Con qué frecuencia sientes que no puedes concentrarte en una sola tarea durante más de 15
           minutos?</p>
-        <div>
+        <div id="quiz-opciones">
           <button type="button">
             <span>Rara vez o nunca</span>
           </button>
@@ -109,7 +110,7 @@
 
       <div>
         <button type="button">Saltar por ahora</button>
-        <button type="button">
+        <button id="btn-siguiente" type="button">
           Siguiente Pregunta
         </button>
       </div>

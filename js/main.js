@@ -62,3 +62,110 @@ botonesOpcion.forEach((boton) =>
     );
   }),
 );
+
+/* EVALUACIÓN SCREENING */
+
+class Pregunta {
+  constructor(id, texto, opciones) {
+    this.id = id;
+    this.texto = texto;
+    this.opciones = opciones;
+  }
+}
+
+const pregunta1 = new Pregunta(
+  1,
+  "¿Con qué frecuencia sientes que no puedes concentrarte en una sola tarea por más de 15 minutos?",
+  [
+    {
+      texto: "Rara vez",
+      puntos: 1,
+    },
+    {
+      texto: "A veces",
+      puntos: 3,
+    },
+    {
+      texto: "Casi siempre",
+      puntos: 5,
+    },
+  ],
+);
+
+const pregunta2 = new Pregunta(
+  2,
+  "Al terminar tu día laboral, ¿qué tan difícil te resulta desconectar de los pendientes y el uso de pantallas?",
+  [
+    {
+      texto: "Fácil",
+      puntos: 1,
+    },
+    {
+      texto: "Me toma tiempo",
+      puntos: 3,
+    },
+    {
+      texto: "Imposible",
+      puntos: 5,
+    },
+  ],
+);
+
+const pregunta3 = new Pregunta(
+  3,
+  "¿Sientes fatiga mental o 'niebla cerebral' incluso después de haber dormido?",
+  [
+    {
+      texto: "Nunca",
+      puntos: 1,
+    },
+    {
+      texto: "Ocasionalmente",
+      puntos: 3,
+    },
+    {
+      texto: "Muy seguido",
+      puntos: 5,
+    },
+  ],
+);
+
+const pregunta4 = new Pregunta(
+  4,
+  "¿Sientes la necesidad de revisar tu teléfono o buscar estímulos digitales apenas tienes un momento libre?",
+  [
+    {
+      texto: "No",
+      puntos: 1,
+    },
+    {
+      texto: "A veces",
+      puntos: 3,
+    },
+    {
+      texto: "Constantemente",
+      puntos: 5,
+    },
+  ],
+);
+
+const pregunta5 = new Pregunta(
+  5,
+  "¿Has notado tensión física (cuello, mandíbula) relacionada con tu carga mental últimamente?",
+  [
+    {
+      texto: "Nada",
+      puntos: 1,
+    },
+    {
+      texto: "Un poco",
+      puntos: 3,
+    },
+    {
+      texto: "Mucha tensión",
+      puntos: 5,
+    },
+  ],
+);
+
+const bancoPreguntas = [pregunta1, pregunta2, pregunta3, pregunta4, pregunta5];
