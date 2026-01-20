@@ -114,37 +114,46 @@
     </section>
 
     <section id="booking-form"> <!-- FORMULARIO -->
-
       <h2>Consulta Inicial</h2>
       <p>Elige un horario para tu evaluación virtual inicial. Sin traslados, solo atención experta desde tu propio
-        espacio.</p>
+        espacio.
+      </p>
 
-      <form> <!-- PARTE DEL FORMULARIO -->
+      <form id="form-contacto">
         <div>
           <div>
             <label>Nombre Completo</label>
-            <input placeholder="Ej. Ana García" type="text" />
+            <input id="form-nombre" placeholder="Ej. Ana García" type="text" required />
           </div>
           <div>
             <label>Correo Electrónico</label>
-            <input placeholder="ana@ejemplo.com" type="email" />
+            <input id="form-email" placeholder="ana@ejemplo.com" type="email" required />
           </div>
         </div>
         <div>
           <label>Objetivo Principal</label>
-          <select>
-            <option>Coaching de Enfoque Ejecutivo</option>
-            <option>Manejo de Estrés y Resiliencia</option>
-            <option>Psicoterapia Clínica</option>
-            <option>Chequeo de Neuro-Salud</option>
+          <select id="form-objetivo">
+            <option value="Coaching">Coaching de Enfoque Ejecutivo</option>
+            <option value="Estres">Manejo de Estrés y Resiliencia</option>
+            <option value="Psicoterapia">Psicoterapia Clínica</option>
+            <option value="Chequeo">Chequeo de Neuro-Salud</option>
           </select>
         </div>
         <div>
           <label>Mensaje (Opcional)</label>
-          <textarea placeholder="Describe brevemente lo que te gustaría lograr..." rows="4"></textarea>
+          <textarea id="form-mensaje" placeholder="Describe brevemente lo que te gustaría lograr..."
+            rows="4"></textarea>
         </div>
+
+        <input type="hidden" id="form-puntaje" value="0">
+
         <button type="submit">Solicitar Cita</button>
       </form>
+
+      <div id="mensaje-exito" style="display: none;">
+        <h3>¡Solicitud enviada con éxito!</h3>
+        <p>Nos pondremos en contacto contigo pronto para confirmar tu evaluación inicial.</p>
+      </div>
     </section>
 
     <hr>

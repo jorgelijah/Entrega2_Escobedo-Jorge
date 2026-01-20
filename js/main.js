@@ -243,3 +243,26 @@ botonSiguiente.addEventListener("click", () => {
 });
 
 /* FORMULARIO */
+
+const formulario = document.querySelector("#form-contacto");
+const mensajeExito = document.querySelector("#mensaje-exito");
+
+formulario.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const nuevaCita = {
+    nombre: document.querySelector("#form-nombre").value,
+    email: document.querySelector("#form-email").value,
+    objetivo: document.querySelector("#form-objetivo").value,
+    mensaje: document.querySelector("#form-mensaje").value,
+    puntajeTest: puntajeTotal,
+    fecha: new Date().toLocaleDateString()
+  };
+
+  const citaEnTextoJSON = JSON.stringify(nuevaCita);
+
+  localStorage.setItem("ultimoRegistroNeuroa", citaEnTextoJSON);
+  console.log("Datos guardados en LocalStorage como JSON:", citaEnTextoJSON);
+  formulario.style.display = "none";
+  mensajeExito.style.display = "block";
+});
