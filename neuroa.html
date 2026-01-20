@@ -96,15 +96,6 @@
         <p id="quiz-pregunta">¿Con qué frecuencia sientes que no puedes concentrarte en una sola tarea durante más de 15
           minutos?</p>
         <div id="quiz-opciones">
-          <button type="button">
-            <span>Rara vez o nunca</span>
-          </button>
-          <button type="button">
-            <span>Varias veces al día</span>
-          </button>
-          <button type="button">
-            <span>Casi constantemente</span>
-          </button>
         </div>
       </div>
 
@@ -114,6 +105,12 @@
           Siguiente Pregunta
         </button>
       </div>
+    </section>
+
+    <section id="resultado-container" style="display: none;"> <!-- Diagnóstico -->
+      <h2>Tu Diagnóstico de Saturación</h2>
+      <p id="resultado-texto"></p>
+      <button onclick="location.reload()">Realizar de nuevo</button>
     </section>
 
     <section id="booking-form"> <!-- FORMULARIO -->

@@ -169,3 +169,77 @@ const pregunta5 = new Pregunta(
 );
 
 const bancoPreguntas = [pregunta1, pregunta2, pregunta3, pregunta4, pregunta5];
+
+let quizProgreso = document.querySelector("#quiz-progreso");
+let quizPregunta = document.querySelector("#quiz-pregunta");
+let quizOpciones = document.querySelector("#quiz-opciones");
+let botonSiguiente = document.querySelector("#btn-siguiente");
+let quizContainer = document.querySelector("#quiz-container");
+let resultadoContainer = document.querySelector("#resultado-container");
+let resultadoTexto = document.querySelector("#resultado-texto");
+
+let indicePreguntaActual = 0;
+let puntajeTotal = 0;
+let eleccionTemporal = 0;
+
+function mostrarPregunta(indice) {
+  let preguntaActual = bancoPreguntas[indice];
+  quizPregunta.innerText = preguntaActual.texto;
+  quizProgreso.innerText = `Pregunta ${indice + 1} de ${bancoPreguntas.length}`;
+  quizOpciones.innerHTML = "";
+  botonSiguiente.disabled = true;
+
+  /* cambio de opciones */
+  preguntaActual.opciones.forEach((opcion) => {
+    quizOpciones.innerHTML += `
+    <button type="button" data-puntos="${opcion.puntos}">
+      <span>${opcion.texto}</span>
+    </button>
+    `;
+  });
+}
+
+quizOpciones.addEventListener("click", (event) => {
+  let botonPresionado = event.target.closest("button");
+
+  if (botonPresionado) {
+    const todosLosBotones = quizOpciones.querySelectorAll("button");
+    todosLosBotones.forEach((boton) =>
+      boton.classList.remove("opcion-seleccionada"),
+    );
+    botonPresionado.classList.add("opcion-seleccionada");
+    eleccionTemporal = Number(botonPresionado.dataset.puntos);
+    botonSiguiente.disabled = false;
+    console.log("Visual y lógica actualizados. Valor:", eleccionTemporal);
+  }
+});
+
+mostrarPregunta(indicePreguntaActual);
+
+botonSiguiente.addEventListener("click", () => {
+  puntajeTotal += eleccionTemporal;
+  eleccionTemporal = 0;
+  if (indicePreguntaActual < bancoPreguntas.length - 1) {
+    indicePreguntaActual++;
+    mostrarPregunta(indicePreguntaActual);
+  } else {
+    quizContainer.style.display = "none";
+    resultadoContainer.style.display = "block";
+
+    let mensajeFinal = "";
+    if (puntajeTotal <= 10) {
+      mensajeFinal =
+        "Tus niveles de saturación son bajos. ¡Buen trabajo manteniendo el equilibrio!";
+    } else if (puntajeTotal <= 20) {
+      mensajeFinal =
+        "Presentas señales moderadas de fatiga mental. Sería ideal revisar tus protocolos de descanso.";
+    } else {
+      mensajeFinal =
+        "Tus niveles de saturación son altos. Tu sistema nervioso podría estar en alerta constante.";
+    }
+
+    resultadoTexto.innerText = `${mensajeFinal} (Puntaje: ${puntajeTotal} puntos)`;
+  }
+});
+
+/* FORMULARIO */

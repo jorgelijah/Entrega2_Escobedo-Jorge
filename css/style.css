@@ -359,3 +359,15 @@ footer h2,
 footer h5 {
   color: white;
 }
+
+/* Clase que aplicaremos dinámicamente con JS */
+.opcion-seleccionada {
+  background-color: #6f00ff !important;
+  /* Un azul vibrante o tu color de marca */
+  color: white !important;
+  border-color: #1a003b !important;
+  transform: scale(1.02);
+  /* Un pequeño efecto de aumento */
+  transition: all 0.2s ease;
+}
+
