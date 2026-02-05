@@ -1,0 +1,82 @@
+{
+  "servicios": [
+    {
+      "id": "Focus",
+      "titulo": "Optimiza tu Rendimiento Cognitivo",
+      "descripcion": "Nuestro enfoque basado en neurociencia te ayuda a dominar el enfoque, eliminar distracciones digitales y recalibrar las vías de recompensa de tu cerebro para el trabajo profundo.",
+      "puntos": [
+        "Mapeo del lapso de atención",
+        "Protocolos de detox de dopamina",
+        "Entrenamiento en neuro-eficiencia"
+      ]
+    },
+    {
+      "id": "Stress",
+      "titulo": "Neuro-Resiliencia y Equilibrio",
+      "descripcion": "Aprende a regular tu sistema nervioso autónomo. Utilizamos técnicas validadas para reducir el cortisol y mejorar tu respuesta biológica ante situaciones de alta presión.",
+      "puntos": [
+        "Biofeedback de variabilidad cardíaca",
+        "Regulación del nervio vago",
+        "Gestión de carga alostática"
+      ]
+    },
+    {
+      "id": "Clinical",
+      "titulo": "Psicoterapia Basada en Evidencia",
+      "descripcion": "Abordaje clínico profundo para ansiedad, depresión y trauma, integrando neurobiología con terapia cognitivo-conductual de última generación para una recuperación sostenible.",
+      "puntos": [
+        "Evaluación diagnóstica integral",
+        "Protocolos TCC de vanguardia",
+        "Monitoreo de bienestar digital"
+      ]
+    }
+  ],
+  "preguntas": [
+    {
+      "id": 1,
+      "texto": "¿Con qué frecuencia sientes que no puedes concentrarte en una sola tarea por más de 15 minutos?",
+      "opciones": [
+        { "texto": "Rara vez", "puntos": 1 },
+        { "texto": "A veces", "puntos": 3 },
+        { "texto": "Casi siempre", "puntos": 5 }
+      ]
+    },
+    {
+      "id": 2,
+      "texto": "Al terminar tu día laboral, ¿qué tan difícil te resulta desconectar de los pendientes y el uso de pantallas?",
+      "opciones": [
+        { "texto": "Fácil", "puntos": 1 },
+        { "texto": "Me toma tiempo", "puntos": 3 },
+        { "texto": "Imposible", "puntos": 5 }
+      ]
+    },
+    {
+      "id": 3,
+      "texto": "¿Sientes fatiga mental o 'niebla cerebral' incluso después de haber dormido?",
+      "opciones": [
+        { "texto": "Nunca", "puntos": 1 },
+        { "texto": "Ocasionalmente", "puntos": 3 },
+        { "texto": "Muy seguido", "puntos": 5 }
+      ]
+    },
+    {
+      "id": 4,
+      "texto": "¿Sientes la necesidad de revisar tu teléfono o buscar estímulos digitales apenas tienes un momento libre?",
+      "opciones": [
+        { "texto": "No", "puntos": 1 },
+        { "texto": "A veces", "puntos": 3 },
+        { "texto": "Constantemente", "puntos": 5 }
+      ]
+    },
+    {
+      "id": 5,
+      "texto": "¿Has notado tensión física (cuello, mandíbula) relacionada con tu carga mental últimamente?",
+      "opciones": [
+        { "texto": "Nada", "puntos": 1 },
+        { "texto": "Un poco", "puntos": 3 },
+        { "texto": "Mucha tensión", "puntos": 5 }
+      ]
+    }
+  ]
+}
+
